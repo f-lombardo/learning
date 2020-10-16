@@ -3,7 +3,7 @@ A collection of leardning resources for software developers
 
 ## XP Techniques
 
-## TDD
+### TDD
 * Watch [J.B. Rainsberger - Integrated Tests Are A Scam](http://vimeo.com/80533536)
 
 ### Misc
