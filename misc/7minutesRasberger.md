@@ -10,6 +10,9 @@ We can reduce accidental complexity writing software with TDD. How to do tha?
 4) Clean up the kitchen!
 
 My doubt here is that if we write (point 3) a code that is too simple (or too stupid) we then have a lot of dirt in the kitchen to clean up.
+Probably the meaning of writing the simplest possible code that makes test pass is this:
+* We want to test the test, i.e., we want to know that the test is sensible to changes in code, and it can become red or green accordingly.
+* We don't want code that can't make a test red if it's wrong even in one of its smallest parts.
 
 Another question is: are we sure that accidental complexity derives just from bad code? Isn't it created by bad system architectures too?
 
