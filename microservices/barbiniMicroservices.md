@@ -13,7 +13,7 @@ In the above picture each big withe circle is a microservice, green circles repr
 They use a single Git repository where they split the codebase in modules:
 * Underware (Utils) 
 * Domain (it depends just on utils)
-* Adapters (they depend on Domain, no dependencies between adapters - If you need links to other adapters you must use interfaces and callbacks)
+* Adapters (connection to other microservices or external services like SparkPost; they depend on Domain, no dependencies between adapters - If you need links to other adapters you must use interfaces and callbacks)
 * Executable (it composes domains and adapter in a microservice)
 
 ### Advantages of this microservices architecture
