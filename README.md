@@ -7,6 +7,7 @@ A collection of learning resources for software developers
 
 ### Misc
 * Watch [7 minutes, 26 seconds, and the Fundamental Theorem of Agile Software Development](https://www.youtube.com/watch?v=WSes_PexXcA) by J.B. Rainsberger (my [notes](misc/7minutesRasberger.md))
+* Collecting some [useful shel script commands](misc/shell.md)
 
 ## Systems architecture
 ### Microservices
@@ -14,3 +15,6 @@ A collection of learning resources for software developers
 * Book [Microservices Patterns: With Examples in Java](https://www.amazon.it/Microservices-Patterns-Examples-Chris-Richardson/dp/1617294543/) by Chris Richardson
 
 ## Agile work management
+
+## Technologies
+* Introduction to [RabbitMQ](https://github.com/f-lombardo/learning.git)
