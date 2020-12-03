@@ -5,6 +5,9 @@
 ##### Differences between two directories
 `diff -qr dir1 dir2`
 
+##### Find a string in files with a certain suffix
+`find . -name '*.kt' | xargs grep "MyString"`
+
 ##### Read file updates in real time
 `tail -f` 
 
@@ -39,6 +42,20 @@ git remote prune origin
 git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d
 echo "...done!"
 ```
+##### How to recover a deleted git stash
+- Search the commit number associated to your deleted stash. For example, if you know it was done on top of commit `abcd`, you can write:
+
+`git fsck 2> /dev/null | awk '/commit/{print $3}' | git show --stdin --grep 'WIP on master: abc'`
+
+otherwise try just with
+
+`git fsck 2> /dev/null | awk '/commit/{print $3}' | git show --stdin --grep 'WIP'`
+- Having found the commit number of your stash, say `123aaa`, apply it with
+
+`git stash apply 123aaa`
+
+See https://mobilejazz.com/blog/how-to-recover-a-deleted-git-stash/
+
 ## Maven
 ##### Run Maven test with a particular locale configuration
 To run maven tests with a particular locale configuration, you should set the `_JAVA_OPTIONS` environment variable. 
