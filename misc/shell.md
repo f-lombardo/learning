@@ -42,6 +42,12 @@ git remote prune origin
 git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d
 echo "...done!"
 ```
+##### How to squash a group of commits
+If you want to squash your last 3 commits in just one:
+`git rebase -i HEAD~3`
+Then, if you have already pushed (and you are sure nobody else pushed in the meanwhile :-)
+`git push -f`
+
 ##### How to recover a deleted git stash
 - Search the commit number associated to your deleted stash. For example, if you know it was done on top of commit `abcd`, you can write:
 
