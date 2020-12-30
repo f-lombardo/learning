@@ -14,6 +14,9 @@
 ##### Open a file in nano without using line wrap
 `nano -w` 
 
+##### Display line numbers in less
+`less -N`
+
 ##### Display line numbers in nano
 `nano -c`
 
