@@ -32,6 +32,11 @@ A faster way of doing this is:
 
 See: https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file
 
+#### Write the output of a terminal session in a text file
+The `script` command redirects all session output to a file called `typescript` in the current directory. 
+You can specify a different file name with:
+`script myFileName`
+
 ## Git
 ##### Search in git files
 `git rev-list --all | xargs git grep -F "$1"`
