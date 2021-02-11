@@ -9,6 +9,7 @@ A collection of learning resources for software developers
 * Watch [7 minutes, 26 seconds, and the Fundamental Theorem of Agile Software Development](https://www.youtube.com/watch?v=WSes_PexXcA) by J.B. Rainsberger (my [notes](misc/7minutesRasberger.md))
 * Collecting some [useful shel script commands](misc/shell.md)
 * Some [SQL commands](misc/sql.md)
+* Some notes on [maven](misc/maven.md)
 
 ## Systems architecture
 ### Microservices
