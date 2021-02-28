@@ -10,6 +10,7 @@ A collection of learning resources for software developers
 * Collecting some [useful shel script commands](misc/shell.md)
 * Some [SQL commands](misc/sql.md)
 * Some notes on [maven](misc/maven.md)
+* Some notes for [mac](misc/mac.md)) users
 
 ## Systems architecture
 ### Microservices
