@@ -70,6 +70,14 @@ otherwise try just with
 
 See https://mobilejazz.com/blog/how-to-recover-a-deleted-git-stash/
 
+#### Change "origin" of your GIT repository 
+```
+git remote rm origin
+git remote add origin git@github.com:aplikacjainfo/proj1.git
+git config master.remote origin
+git config master.merge refs/heads/master
+```
+
 ## Maven
 ##### Run Maven test with a particular locale configuration
 To run maven tests with a particular locale configuration, you should set the `_JAVA_OPTIONS` environment variable. 
