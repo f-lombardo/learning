@@ -10,8 +10,8 @@ A collection of learning resources for software developers
 * Collecting some [useful shel script commands](misc/shell.md)
 * Some [SQL commands](misc/sql.md)
 * Some notes on [maven](misc/maven.md)
-* Some notes for [Mac](misc/mac.md)) users
-* Some notes on [Java](misc/java.md)) users
+* Some notes for [Mac](misc/mac.md) users
+* Some notes on [Java](misc/java.md) users
 * Stuffs related to [AWS](misc/aws.md)
 
 ## Systems architecture
