@@ -12,6 +12,7 @@ A collection of learning resources for software developers
 * Some notes on [maven](misc/maven.md)
 * Some notes for [Mac](misc/mac.md)) users
 * Some notes on [Java](misc/java.md)) users
+* Stuffs related to [AWS](misc/aws.md)
 
 ## Systems architecture
 ### Microservices
