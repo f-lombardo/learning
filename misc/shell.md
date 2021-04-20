@@ -38,7 +38,7 @@ You can specify a different file name with:
 `script myFileName`
 
 #### A sample prompt
-```
+```shell
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export CLICOLOR=1
 
