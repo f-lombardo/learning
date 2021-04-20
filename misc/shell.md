@@ -37,6 +37,21 @@ The `script` command redirects all session output to a file called `typescript` 
 You can specify a different file name with:
 `script myFileName`
 
+#### A sample prompt
+```
+export LSCOLORS=gxfxcxdxbxegedabagacad
+export CLICOLOR=1
+
+light_green="\[\e[1;32m\]"
+light_red="\[\e[1;31m\]"
+yellow="\[\e[0;33m\]"
+gray="\[\e[0;37m\]"
+cyan="\[\e[0;36m\]"
+reset="\[\e[m\]"
+
+export PS1="\$([ \$? == 0 ] && echo ✅ || echo ❌ ) ${cyan}\w${reset} \$ "
+```
+
 ## Git
 ##### Search in git files
 `git rev-list --all | xargs git grep -F "$1"`
