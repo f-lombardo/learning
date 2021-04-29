@@ -37,6 +37,9 @@ The `script` command redirects all session output to a file called `typescript` 
 You can specify a different file name with:
 `script myFileName`
 
+### Find your public IP address
+`curl ifconfig.me`
+
 #### A sample prompt
 ```shell
 export LSCOLORS=gxfxcxdxbxegedabagacad
@@ -49,7 +52,7 @@ gray="\[\e[0;37m\]"
 cyan="\[\e[0;36m\]"
 reset="\[\e[m\]"
 
-export PS1="\$([ \$? == 0 ] && echo ✅ || echo ❌ ) ${cyan}\w${reset} \$ "
+export PS1="\$([ \$? == 0 ] && echo ✅ || echo ❌ ) ${cyan}\w${reset} \$${reset} "
 ```
 
 ## Git
