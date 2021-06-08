@@ -96,6 +96,11 @@ git config master.remote origin
 git config master.merge refs/heads/master
 ```
 
+#### Using personal access tokens for cloning a repository
+```
+git clone https://your_user_id:your_token@coderepo.com/some_path_to/your_project.git
+```
+
 ## Maven
 ##### Run Maven test with a particular locale configuration
 To run maven tests with a particular locale configuration, you should set the `_JAVA_OPTIONS` environment variable. 
