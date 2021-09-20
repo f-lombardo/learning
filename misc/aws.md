@@ -12,3 +12,8 @@ else
   export EXECUTION_ENVIRONMENT=local
 fi
 ```
+
+## How to create key-par for connecting to an EC2 instance through SSH
+```shell script
+ssh -keygen -m PEM -t rsa -C mysefl@mydomain.com
+```
