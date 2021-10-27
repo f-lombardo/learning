@@ -15,5 +15,12 @@ fi
 
 ## How to create key-par for connecting to an EC2 instance through SSH
 ```shell script
-ssh -keygen -m PEM -t rsa -C mysefl@mydomain.com
+ssh-keygen -m PEM -t rsa -C mysefl@mydomain.com
 ```
+
+# AWS Services
+* [Infrastructure as code](https://jennapederson.com/blog/2021/4/2/what-is-infrastructure-as-code/)
+* [CloudFormation](https://jennapederson.com/blog/2021/5/10/introduction-to-aws-cloudformation/)
+* DynamoDB:  
+  * [What is DynamoDB](https://www.dynamodbguide.com/what-is-dynamo-db)
+  * [Single-Table Design](https://www.alexdebrie.com/posts/dynamodb-single-table/)

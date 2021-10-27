@@ -20,6 +20,8 @@ A collection of learning resources for software developers
 * Book [Microservices Patterns: With Examples in Java](https://www.amazon.it/Microservices-Patterns-Examples-Chris-Richardson/dp/1617294543/) by Chris Richardson
 
 ## Agile work management
+* [Writing good user stories](https://dev.to/rammina/the-art-of-writing-agile-user-stories-17o9)
+* [User stories Mistakes](https://www.romanpichler.com/blog/5-common-user-story-mistakes/)
 
 ## Technologies
 * Introduction to [RabbitMQ](https://github.com/f-lombardo/learning.git)
