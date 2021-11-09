@@ -26,3 +26,4 @@ A collection of learning resources for software developers
 ## Technologies
 * Introduction to [RabbitMQ](https://github.com/f-lombardo/learning.git)
 * [Kubernetes](k8/k8.md)
+* [Typescript and node](languages/node.md)
