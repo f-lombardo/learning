@@ -21,5 +21,15 @@ mkdir ~/npm-proxy-cache`
 ```bash
 npm-proxy-cache -p 8099 -e -t 36000 -s ~/npm-proxy-cache
 ```
+### Some environment variables for nodejs
+Setting the following variable can bypass problems during https connections, such as handling self-signed or expired certificates: 
+```
+NODE_TLS_REJECT_UNAUTHORIZED=0
+```
+---
+With this setting we ask node to display logs for the listed modules (in this example tls, https and http).
+```
+NODE_DEBUG=tls,https,http
+```
 
 
