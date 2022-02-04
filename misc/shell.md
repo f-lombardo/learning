@@ -100,6 +100,9 @@ git config master.merge refs/heads/master
 ```
 git clone https://your_user_id:your_token@coderepo.com/some_path_to/your_project.git
 ```
+#### Ignoring files just for your current copy of the repository
+You can ignore particular files that are just on your machine without messing up `.gitignore` by adding them in file
+`.git/info/exclude`.
 
 ## Maven
 ##### Run Maven test with a particular locale configuration
