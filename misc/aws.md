@@ -24,3 +24,22 @@ ssh-keygen -m PEM -t rsa -C mysefl@mydomain.com
 * DynamoDB:  
   * [What is DynamoDB](https://www.dynamodbguide.com/what-is-dynamo-db)
   * [Single-Table Design](https://www.alexdebrie.com/posts/dynamodb-single-table/)
+
+## Steps to get the public key of a Cognito User Pool
+1. get a JWT id Token (we put here in token var) connecting to the user pool userPoolUrl
+2. decode the JWT token using any tool, for example https://jwt.io
+3. from step 2 find the kid
+4. get the list of JSON Web Keys (JWK) for the user pool connecting to
+https://cognito-idp.{region}.amazonaws.com/{userPoolId}/.well-known/jwks.json
+5. get the right key from the json you downloaded in step 4, for example
+```
+{
+  "alg": "RS256",
+  "e": "AQAB",
+  "kid": "EQBIefxxxxxxxxxxxxxxxufgs=",
+  "kty": "RSA",
+  "n": "2TMkJbaSbIIRBjii7AvKOsyxxxxxxxxxxxxxxxxxxxxxxrf1J",
+  "use": "sig"
+}
+```
+6. Decode this JWK  to a PEM file using for example an online decoder like https://8gwifi.org/jwkconvertfunctions.jsp
