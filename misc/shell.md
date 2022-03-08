@@ -111,8 +111,12 @@ For example, if you use bash, you add this line to `.bash_profile`:
 
 `export _JAVA_OPTIONS='-Duser.language=en -Duser.country=US'`
 
-##IntelliJ
+## IntelliJ
 ##### Run a subset of tests
 Here are some patterns that can be handy to run some kind of tests from IntelliJ:
 * `.*E2E.*` -> runs only tests that have E2E in their name
 * `^(?!.*IT$).*$` -> excludes tests that have IT in their name
+
+
+## Misc
+A sample script for [adding comments in typescript sources](add_comments.sh).
