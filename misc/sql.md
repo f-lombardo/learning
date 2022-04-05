@@ -7,7 +7,7 @@
 CREATE FULLTEXT INDEX fx_name ON users (firstName, lastName);
 ```
 
-If you're using TypeORM you can use th following annotation on the User entity:
+If you're using TypeORM you can use the following annotation on the User entity:
 
 ```typescript
 @Entity()
