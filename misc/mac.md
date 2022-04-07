@@ -17,3 +17,8 @@ Anyway a minor problem with notarization will manifest itself through a security
 4. Go into the Certificates section and locate the certificate you just added
 5. Double-click on it, enter the trust section and under “When using this certificate” select “Always Trust”
    See [this document](https://tosbourn.com/getting-os-x-to-trust-self-signed-ssl-certificates/)
+
+## How to run a generic x64 Docker image with M1 processors
+Use `--platform linux/amd64` switch. For example, in order to run sonarqube image:
+
+```docker run --platform linux/amd64 -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest```
