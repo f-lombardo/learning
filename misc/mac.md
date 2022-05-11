@@ -22,3 +22,8 @@ Anyway a minor problem with notarization will manifest itself through a security
 Use `--platform linux/amd64` switch. For example, in order to run sonarqube image:
 
 ```docker run --platform linux/amd64 -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest```
+
+## How to change your DNS servers from command line
+In order to change your DNS server, for example for yur WiFi connection, you can use this command:
+
+```networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4```
