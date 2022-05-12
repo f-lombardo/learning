@@ -31,5 +31,30 @@ With this setting we ask node to display logs for the listed modules (in this ex
 ```
 NODE_DEBUG=tls,https,http
 ```
+## Typescript
+### Adding import aliases in Node
+There are three steps for using [import aliases](https://github.com/labs42io/clean-code-typescript#use-typescript-aliases) with node:
+1. Add `baseUrl` and `path` options to `tsconfig.json`, for example:
+```
+    "baseUrl": "./",
+    "paths": {
+      "@my_app_appservices/*": ["src/appservices/*"],
+      "@my_app_consts/*": ["src/consts/*"],
+      }
+```
+2. Add `moduleMapper` option to [`jest` configuration](https://kulshekhar.github.io/ts-jest/docs/getting-started/paths-mapping/).
+For example, if you configure `jest` in `package.json`, you could write something like this:
+```
+  "jest": {
+    "moduleNameMapper": {
+      "^@my_app_appservices/(.*)$": "<rootDir>/src/appservices/$1",
+      "^@my_app_consts/(.*)$": "<rootDir>/src/consts/$1",
+```
+3. Since [`tsc` doesn't compile alias path](https://stackoverflow.com/questions/59179787/tsc-doesnt-compile-alias-paths),
+we should use [`tsc-alias`](https://github.com/justkey007/tsc-alias), changing our build script this way: 
+```
+"build": "tsc && tsc-alias"
+```
+
 
 
