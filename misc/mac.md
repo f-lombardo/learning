@@ -27,3 +27,6 @@ Use `--platform linux/amd64` switch. For example, in order to run sonarqube imag
 In order to change your DNS server, for example for your Wi-Fi connection, you can use this command:
 
 ```networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4```
+
+## Force clearing of DNS cache
+```sudo killall -HUP mDNSResponder```
