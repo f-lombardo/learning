@@ -23,6 +23,15 @@ FROM    users
 WHERE   MATCH(firstName ,lastName) AGAINST ('+rossi +mario' IN BOOLEAN MODE)
 ```
 
+If you want to have a "starts with" match, you can add an asterisk at the end of searching terms. For example:
+```sql
+SELECT  id , firstName , lastName , fiscalCode 
+FROM    users 
+WHERE   MATCH(firstName ,lastName) AGAINST ('+rossi* +mario*' IN BOOLEAN MODE)
+```
+
+This query would find 'Mario Rossi', 'Mariolino Rossi' ad 'Mario Rossini'.
+
 ### How to overcome MySQL error 1093 'you can’t specify target table for update in from clause'
 Running the following in Mysql query gives error 1093 'you can’t specify target table for update in from clause'
 ```sql
