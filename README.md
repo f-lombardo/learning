@@ -25,7 +25,7 @@ A collection of learning resources for software developers
 * [User stories Mistakes](https://www.romanpichler.com/blog/5-common-user-story-mistakes/)
 
 ## Technologies
-* Introduction to [RabbitMQ](https://github.com/f-lombardo/learning.git)
+* Introduction to [RabbitMQ](https://www.rabbitmq.com/)
 * [Kubernetes](k8/k8.md)
 * [Typescript and node](languages/node.md)
 * Some notes on [Kafka](misc/kafka.md)
