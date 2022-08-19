@@ -104,6 +104,28 @@ git clone https://your_user_id:your_token@coderepo.com/some_path_to/your_project
 You can ignore particular files that are just on your machine without messing up `.gitignore` by adding them in file
 `.git/info/exclude`.
 
+#### Using multiple SSH keys to access Github
+Edit `~/.ssh/config` file this way
+```
+Host gh_work
+    HostName github.com
+    IdentityFile ~/.ssh/key_for_work
+
+Host gh_personal
+    HostName github.com
+    IdentityFile ~/.ssh/key_for_personal_use
+```
+The `Host` is how you will reference credentials on your terminal. To test your connection try `ssh -T git@<myHost>`.
+Then you can clone your repos using the host vars you specified before:
+```
+git clone git@<myHost>:user-name/reponame.git
+```
+To change an already cloned repository use:
+```
+git remote remove origin
+git remote add origin git@<myHost>:user-name/reponame.git
+```
+
 ## Maven
 ##### Run Maven test with a particular locale configuration
 To run maven tests with a particular locale configuration, you should set the `_JAVA_OPTIONS` environment variable. 
