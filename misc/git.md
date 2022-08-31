@@ -89,3 +89,8 @@ And then push to it with
 ```
 git push comdecommit my-branch
 ```
+If you are using Mac OS, remember to periodically run this script before pushing to CodeCommit (about every 15 minutes)
+```
+security delete-internet-password -l git-codecommit.eu-west-1.amazonaws.com
+```
+See this [post for more information on the problem](https://docs.aws.amazon.com/codecommit/latest/userguide/troubleshooting-ch.html).
