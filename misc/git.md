@@ -74,9 +74,8 @@ To be able to use CodeCommit repositories you coudl add this section to your  ~/
 
 ```
 [credential]
-	#helper = store
-        helper = !aws --profile my-profile codecommit credential-helper $@
-        useHttpPath = true
+    helper = !aws --profile acube-prod codecommit credential-helper $@
+    useHttpPath = true
 ```
 
 We suppose here that you already have `my-profile` profile configured for the aws command.
