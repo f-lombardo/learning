@@ -74,7 +74,7 @@ To be able to use CodeCommit repositories you coudl add this section to your  ~/
 
 ```
 [credential]
-    helper = !aws --profile acube-prod codecommit credential-helper $@
+    helper = !aws --profile my-profile codecommit credential-helper $@
     useHttpPath = true
 ```
 
