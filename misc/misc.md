@@ -9,3 +9,17 @@ curl \
   -F map='{ "0": ["variables.fileUpload"] }' \
   -F "0=@./someFile.csv;type=text/csv"
 ```
+## Creating a PDF from image files
+User imagemagick. 
+
+On Linux (Ubuntu) install it with 
+
+`sudo apt-get install imagemagick`.
+
+On Mac 
+
+`brew install imagemagick`
+
+Then:
+
+`convert -quality 60 *.jpg -auto-orient output.pdf`
