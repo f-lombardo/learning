@@ -30,3 +30,6 @@ A collection of learning resources for software developers
 * [Kubernetes](k8/k8.md)
 * [Typescript and node](languages/node.md)
 * Some notes on [Kafka](misc/kafka.md)
+
+## Databases
+* Notes on [PostgreSQL](db/postgresql.md)
