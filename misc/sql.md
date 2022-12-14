@@ -75,3 +75,10 @@ SELECT SCN_TO_TIMESTAMP(ora_rowscn), MY_TABLE.*
 FROM MYTABLE
 ```
 
+## PostgreSQL specific
+### How to extract data from a JSON field
+```sql
+select trim( '"' from (my_json_field::json->'my_property')::text) 
+from my_table
+```
+
