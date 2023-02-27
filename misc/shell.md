@@ -6,7 +6,7 @@
 `diff -qr dir1 dir2`
 
 ##### Find a string in files with a certain suffix
-`find . -name '*.kt' | xargs grep "MyString"`
+`find . -name '*.kt' -type f | xargs grep "MyString"`
 
 ##### Read file updates in real time
 `tail -f` 
