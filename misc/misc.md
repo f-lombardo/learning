@@ -23,3 +23,9 @@ On Mac
 Then:
 
 `convert -quality 60 *.jpg -auto-orient output.pdf`
+
+## A really simple HTTP server
+We can run a really simple HTTP server for testing purposes using Ruby:
+```shell
+ruby -run -ehttpd . -p8888
+```
