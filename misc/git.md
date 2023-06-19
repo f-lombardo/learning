@@ -69,6 +69,11 @@ git remote remove origin
 git remote add origin git@<myHost>:user-name/reponame.git
 ```
 
+Please remember to set up `user.email` and `user.name` correctly:
+```shell
+git config --local user.email yours@email.test
+```
+
 ## AWS CodeCommit
 To be able to use CodeCommit repositories you coudl add this section to your  ~/.gitconfig  file:
 
