@@ -75,7 +75,7 @@ git config --local user.email yours@email.test
 ```
 
 ## AWS CodeCommit
-To be able to use CodeCommit repositories you coudl add this section to your  ~/.gitconfig  file:
+To be able to use CodeCommit repositories you could add this section to your  ~/.gitconfig  file:
 
 ```
 [credential]
