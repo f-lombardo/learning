@@ -23,6 +23,12 @@ Use `--platform linux/amd64` switch. For example, in order to run sonarqube imag
 
 ```docker run --platform linux/amd64 -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest```
 
+You can also use an environment variable to set the default platform
+
+```shell
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+```
+
 ## How to change your DNS servers from command line
 In order to change your DNS server, for example for your Wi-Fi connection, you can use this command:
 
