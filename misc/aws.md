@@ -43,3 +43,7 @@ https://cognito-idp.{region}.amazonaws.com/{userPoolId}/.well-known/jwks.json
 }
 ```
 6. Decode this JWK  to a PEM file using for example an online decoder like https://8gwifi.org/jwkconvertfunctions.jsp
+
+## A script to update an ingres security group with your current IP
+
+See [this script](./update_sg.sh)
