@@ -20,7 +20,7 @@
 ##### Display line numbers in nano
 `nano -c`
 
-Otherwise you could press `Ctrl-c` during editing to show current position. 
+Otherwise, you could press `Ctrl-c` during editing to show current position. 
 
 ##### Extraxt the nth line from a file
 `sed 'NUMq;d' sourcefile`
@@ -39,6 +39,11 @@ You can specify a different file name with:
 
 ### Find your public IP address
 `curl ifconfig.me`
+
+### Set VAR to "foo" if VAR is unset or the empty string
+
+`: ${VAR:=foo}`
+
 
 #### A sample prompt
 ```shell
