@@ -1,6 +1,6 @@
 # Notes on PostgreSQL
 
-# Backup and restore
+## Backup and restore
 To execute a backup we can use `pg_dump`:
 
 ```shell
@@ -29,3 +29,30 @@ psql -h myDestinationHost -U myUser -f myDB.dump template1
 Please note that the final database name is not the one that we would like to restore, but just a default database we need for initial connection of `psql`.
 This holds for `pg_restore` command too! 
 Be prepared to edit the dump file to remove incompatible statements if the version of the target database does not match the version of the `pg_dump` program used to make the backup
+
+## Performances
+
+Here is a sample database for tests https://github.com/devrimgunduz/pagila
+
+Tip: don't join views, since this will make the syntax tree more complicated.
+
+`EXPLAIN`: explains the query without executing it
+`EXPLAIN ANALYZE`: runs the query and explains it
+
+`LIMIT` clause just limits data provided to the user, but it performs table scans anyway.
+
+Indexes are often not used for clauses like `FIELD > 123`
+
+`CREATE STATISTICS` creates a table with more statistics on a set of columns of a table. It would be useful to tell PostgreSQL that
+there is some sort of relationship in data of the selected fields.
+
+`SELECT * FROM pg_stat_all_tables WHERE relname='my_table'`
+`SELECT * FROM pg_stat_all_indexes WHERE relname='my_table'` -> if number of index scans is low we can drop the index
+
+For PG it's better to have few powerful cores than many low performance cores.
+
+`VACUUM` command identifies expired records and frees their space. It can be used with the wrapping program `vacuumdb`.
+
+`VACUUM FULL` creates a new table and copies the valid records in it. It locks the table during the operation. Run it only if you're running out of disk space.
+
+`ANALYZE my_table` collects statistics on the selected table.
