@@ -24,6 +24,11 @@ Then:
 
 `convert -quality 60 *.jpg -auto-orient output.pdf`
 
+## Displaying field names inside a PDF
+We can use the `pdftk` tool via `docker`:
+
+```docker run --rm --volume $(pwd):/work pdftk/pdftk:latest example.pdf dump_data_fields```
+
 ## A really simple HTTP server
 We can run a really simple HTTP server for testing purposes using Ruby:
 ```shell
