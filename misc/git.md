@@ -99,3 +99,9 @@ If you are using Mac OS, remember to periodically run this script before pushing
 security delete-internet-password -l git-codecommit.eu-west-1.amazonaws.com
 ```
 See this [post for more information on the problem](https://docs.aws.amazon.com/codecommit/latest/userguide/troubleshooting-ch.html).
+
+## How to count number of commits per day
+```
+git log --date=short --pretty=format:%ad | sort | uniq -c
+```
+
