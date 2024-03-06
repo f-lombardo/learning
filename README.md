@@ -33,3 +33,6 @@ A collection of learning resources for software developers
 
 ## Databases
 * Notes on [PostgreSQL](db/postgresql.md)
+
+## Docker examples
+Here is a small collection of [docker compose examples](docker_examples)
