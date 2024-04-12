@@ -105,3 +105,7 @@ See this [post for more information on the problem](https://docs.aws.amazon.com/
 git log --date=short --pretty=format:%ad | sort | uniq -c
 ```
 
+## Mirroring everything from a local repository to github
+```
+git push --mirror https://github.com/EXAMPLE-USER/EXAMPLE-REPO.git
+```
