@@ -7,7 +7,7 @@ openssl enc -aes-256-ctr -pbkdf2 -e -a -in plain_file.txt -out encrypted.txt
 
 Here is a description of parameters:
 enc: encode/decode with symmetric key
--aes-256-ctr encode using aesn(block mapping funcion), 256 bit blocks, crt block cipher
+-aes-256-ctr encode using aesn (block mapping function), 256 bit blocks, crt block cipher
 -pbkdf2 key deriving algorithm
 -e encode
 -a convert result to base64
