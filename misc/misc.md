@@ -29,6 +29,26 @@ We can use the `pdftk` tool via `docker`:
 
 ```docker run --rm --volume $(pwd):/work pdftk/pdftk:latest example.pdf dump_data_fields```
 
+Here is a simple script to automate this task:
+```bash
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 <filename>"
+    exit 1
+fi
+
+FILE_PATH=$(realpath "$1")
+
+DIR_PATH=$(dirname "$FILE_PATH")
+
+BASE_NAME=$(basename "$1")
+
+cd "$DIR_PATH" || exit 1
+
+docker run --rm --volume "$(pwd)":/work pdftk/pdftk:latest "$BASE_NAME" dump_data_fields
+```
+
 ## A really simple HTTP server
 We can run a really simple HTTP server for testing purposes using Ruby:
 ```shell
