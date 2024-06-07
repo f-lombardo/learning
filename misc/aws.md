@@ -47,3 +47,8 @@ https://cognito-idp.{region}.amazonaws.com/{userPoolId}/.well-known/jwks.json
 ## A script to update an ingres security group with your current IP
 
 See [this script](./update_sg.sh)
+
+## How to copy a file from/to S3
+```
+aws s3 cp s3://bucket-name/path/file .
+```
