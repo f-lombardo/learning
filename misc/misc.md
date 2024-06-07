@@ -54,3 +54,8 @@ We can run a really simple HTTP server for testing purposes using Ruby:
 ```shell
 ruby -run -ehttpd . -p8888
 ```
+
+Here is another example using Python:
+```shell
+python3 -m http.server 9000
+```
