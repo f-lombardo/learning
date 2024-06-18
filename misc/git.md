@@ -31,6 +31,16 @@ otherwise try just with
 
 See https://mobilejazz.com/blog/how-to-recover-a-deleted-git-stash/
 
+## How to checkout a file from a previous commit
+1. Identify the commit SHA
+```
+git log -- path/to/file
+```
+2. Checkout the file
+```
+git checkout <commit-sha> -- path/to/file
+```
+
 ## Change "origin" of your GIT repository
 ```
 git remote rm origin
