@@ -8,3 +8,10 @@ bin/console doctrine:migrations:diff
 ```shell
 bin/console doctrine:migrations:execute --up yyyyMMddhhmmss
 ```
+### How to set up a brand-new DB
+```shell
+bin/console doctrine:database:create --up yyyyMMddhhmmss
+bin/console doctrine:schema:update --force
+bin/console doctrine:migrations:sync-metadata-storage
+echo yes | bin/console doctrine:migrations:version --add --all
+```
