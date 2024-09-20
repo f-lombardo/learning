@@ -44,6 +44,8 @@ You can specify a different file name with:
 
 `: ${VAR:=foo}`
 
+#### A simple program to remove duplicates
+See [remove_duplicates.sh](remove_duplicates.sh)
 
 #### A sample prompt
 ```shell
