@@ -37,6 +37,9 @@ The `script` command redirects all session output to a file called `typescript` 
 You can specify a different file name with:
 `script myFileName`
 
+### Check disk space on /
+`df -h /`
+
 ### Find your public IP address
 `curl ifconfig.me`
 
