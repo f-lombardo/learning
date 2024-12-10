@@ -1,4 +1,10 @@
 # Really miscellaneous stuffs
+## Useful curl options
+`-s` (Silent mode)
+`--location` (enables automatic redirection handling)
+`-i` (Include HTTP headers in the output)
+
+
 ## Using curl for uploading files via graphql
 This command uploads local file `./someFile.csv` calling a graphql mutation called `someUploadMutation`:
 ```
