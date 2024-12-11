@@ -2,6 +2,10 @@
 ## Search in git files
 `git rev-list --all | xargs git grep -F "$1"`
 
+or 
+
+`git grep "search string" $(git rev-list --all)`
+
 ## Clean local branches based on remote status
 ```bash
 #!/bin/bash
