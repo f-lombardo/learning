@@ -8,6 +8,8 @@
 
 `-X METHOD` (Set the request method GET/POST/PUT...)
 
+`-k` Accept self-signed certificates
+
 ## Using curl for uploading files via graphql
 This command uploads local file `./someFile.csv` calling a graphql mutation called `someUploadMutation`:
 ```
