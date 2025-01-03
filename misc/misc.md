@@ -60,6 +60,12 @@ cd "$DIR_PATH" || exit 1
 docker run --rm --volume "$(pwd)":/work pdftk/pdftk:latest "$BASE_NAME" dump_data_fields
 ```
 
+## Merging many PDF files into a single one
+Put all your PDF in a single directory and name them in a way that will reflect their position in the final file. Then run:
+```bash
+gs -q  -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=output.pdf *.pdf
+```
+
 ## A really simple HTTP server
 We can run a really simple HTTP server for testing purposes using Ruby:
 ```shell
