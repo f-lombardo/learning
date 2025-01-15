@@ -15,3 +15,8 @@ bin/console doctrine:schema:update --force
 bin/console doctrine:migrations:sync-metadata-storage
 echo yes | bin/console doctrine:migrations:version --add --all
 ```
+
+### How to check the validity of Doctrine schema
+```shell
+bin/console doctrine:schema:validate --skip-sync
+```
