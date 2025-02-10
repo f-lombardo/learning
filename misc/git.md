@@ -6,6 +6,8 @@ or
 
 `git grep "search string" $(git rev-list --all)`
 
+The above command searches in all files in all branches, even in dismissed ones.
+
 ## Clean local branches based on remote status
 ```bash
 #!/bin/bash
