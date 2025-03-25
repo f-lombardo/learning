@@ -125,3 +125,20 @@ git log --date=short --pretty=format:%ad | sort | uniq -c
 ```
 git push --mirror https://github.com/EXAMPLE-USER/EXAMPLE-REPO.git
 ```
+
+## Add a different remote for Open Source merging
+```
+git remote add new_remote git@github.com:user_name/project_name.git
+```
+
+```
+git fetch new_remote 
+```
+
+```
+git checkout -b branch_name --track new_remote/branch_name
+```
+
+```
+git push origin branch_name
+```
