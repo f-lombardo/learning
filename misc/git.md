@@ -66,11 +66,11 @@ You can ignore particular files that are just on your machine without messing up
 ## Using multiple SSH keys to access Github
 Edit `~/.ssh/config` file this way
 ```
-Host gh_work
+Host gh.work
     HostName github.com
     IdentityFile ~/.ssh/key_for_work
 
-Host gh_personal
+Host gh.personal
     HostName github.com
     IdentityFile ~/.ssh/key_for_personal_use
 ```
@@ -89,6 +89,25 @@ Please remember to set up `user.email` and `user.name` correctly:
 ```shell
 git config --local user.email yours@email.test
 ```
+
+Here is a bash function you can add to your .profile file to create an alias for cloning a repo with your personal account:
+```bash
+ghp ()
+{
+    url=$1
+
+    username=$(echo "$url" | cut -d':' -f2- | cut -d'/' -f1)
+    repository=$(echo "$url" | rev | cut -d'/' -f1 | rev | cut -d'.' -f1)
+
+    git clone git@gh.personal:$username/$repository.git
+    cd $repository
+
+    git config --local user.email your.persoonal@mai.test
+    git config --local user.name "Your Name" 
+    
+}
+```
+
 
 ## AWS CodeCommit
 To be able to use CodeCommit repositories you could add this section to your  ~/.gitconfig  file:
