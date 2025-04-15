@@ -14,6 +14,7 @@ A collection of learning resources for software developers
 * Some notes for [Mac](misc/mac.md) users
 * Some notes on [Java](misc/java.md) users
 * Stuffs related to [AWS](misc/aws.md)
+* [PowerShell and bat](misc/powershell.md) related scripts
 * Some [other stuffs](misc/misc.md)
 
 ## Systems architecture
