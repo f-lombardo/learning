@@ -23,3 +23,21 @@ Get-ChildItem -Path .\ -Filter "._*" -Recurse -Force |
     Where-Object {$_.PSIsContainer -eq $false} |
     Select-Object -ExpandProperty FullName
 ```
+
+## Powershell prompt
+Here is a function to customise your powershell prompt. Put it into `$home\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`:
+
+```powershell
+function prompt {
+    $hasError = -not $?
+    $exitCode = if ($null -ne $LASTEXITCODE) { $LASTEXITCODE } else { 0 }
+
+    if ($hasError -or ($exitCode -ne 0)) {
+        Write-Host "PS $($executionContext.SessionState.Path.CurrentLocation)> " -ForegroundColor Red -NoNewline
+    } else {
+        Write-Host "PS $($executionContext.SessionState.Path.CurrentLocation)> " -NoNewline
+    }
+
+    return " "
+}
+```
