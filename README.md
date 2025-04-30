@@ -31,6 +31,7 @@ A collection of learning resources for software developers
 * [Kubernetes](k8/k8.md)
 * [Typescript and node](languages/node.md)
 * [PHP and Symfony](languages/php.md)
+* [Python](languages/python.md)
 * Some notes on [Kafka](misc/kafka.md)
 
 ## Databases
