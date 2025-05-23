@@ -161,3 +161,12 @@ git checkout -b branch_name --track new_remote/branch_name
 ```
 git push origin branch_name
 ```
+
+## Make the current Git branch a master branch
+See [this StackOverflow answer](https://stackoverflow.com/a/2763118/2417560)
+```
+git checkout better_branch          # This is the branch whose commits you want to keep
+git merge --strategy=ours master    # keep the content of this branch, but record a merge
+git checkout master                 # You want to **lose** all changes on this branch
+git merge better_branch             # fast-forward master up to the merge
+```
