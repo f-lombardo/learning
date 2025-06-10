@@ -41,3 +41,22 @@ function prompt {
     return " "
 }
 ```
+
+## Show full commands history
+
+```powershell
+cat (Get-PSReadlineOption).HistorySavePath
+```
+
+## Run as administrator
+
+```powershell
+Start-Process powershell -Verb runAs
+```
+
+## Set and show environment variables
+
+```powershell
+$env:MY_VAR=xx
+dir env:
+```
