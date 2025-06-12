@@ -51,7 +51,7 @@ cat (Get-PSReadlineOption).HistorySavePath
 ## Run as administrator
 
 ```powershell
-Start-Process powershell -Verb runAs
+Start-Process pwsh -Verb runAs
 ```
 
 ## Set and show environment variables
