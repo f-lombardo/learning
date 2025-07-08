@@ -29,13 +29,23 @@ Here is a function to customise your powershell prompt. Put it into `$home\Docum
 
 ```powershell
 function prompt {
+    $hour = Get-Date -Format "HH:mm:ss"
+    if ((Get-History).count -ge 1)
+    {
+        $executionTime = ((Get-History)[-1].EndExecutionTime - (Get-History)[-1].StartExecutionTime).Totalmilliseconds
+        $time = [math]::Round($executionTime, 0)
+        $basePrompt = "PS $time ms | $hour | $($executionContext.SessionState.Path.CurrentLocation)> "
+    } else {
+        $basePrompt = "PS $hour | $($executionContext.SessionState.Path.CurrentLocation)> "
+    }
+
     $hasError = -not $?
     $exitCode = if ($null -ne $LASTEXITCODE) { $LASTEXITCODE } else { 0 }
 
     if ($hasError -or ($exitCode -ne 0)) {
-        Write-Host "PS $($executionContext.SessionState.Path.CurrentLocation)> " -ForegroundColor Red -NoNewline
+        Write-Host $basePrompt -ForegroundColor Red -NoNewline
     } else {
-        Write-Host "PS $($executionContext.SessionState.Path.CurrentLocation)> " -NoNewline
+        Write-Host $basePrompt -NoNewline
     }
 
     return " "
