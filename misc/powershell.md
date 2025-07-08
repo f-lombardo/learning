@@ -64,6 +64,14 @@ cat (Get-PSReadlineOption).HistorySavePath
 Start-Process pwsh -Verb runAs
 ```
 
+So we can write something similar to the `su` command:
+
+```powershell
+function su {
+	Start-Process pwsh -Verb runAs
+}
+```
+
 ## Set and show environment variables
 
 ```powershell
