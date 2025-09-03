@@ -79,3 +79,10 @@ Here is another example using Python:
 ```shell
 python3 -m http.server 9000
 ```
+
+## How to count lines of code in a project
+You can use [cloc](https://github.com/AlDanial/cloc)
+
+```shell
+docker run --rm -v .:/tmp aldanial/cloc . --exclude-dir=prove,LIBRERI
+```
