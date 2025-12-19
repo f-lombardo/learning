@@ -35,3 +35,7 @@ public static function binary32Decode(string $s): float
      return $value[1];
 }
 ```
+
+## PHPStorm
+To run PHP inside a Docker container spinned up by Docker Compose, you need to add a new run configuration in which 
+you specify the COMPOSE_PROJECT_NAME environment variable.

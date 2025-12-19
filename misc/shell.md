@@ -65,6 +65,19 @@ reset="\[\e[m\]"
 export PS1="\$([ \$? == 0 ] && echo ✅ || echo ❌ ) ${cyan}\w${reset} \$${reset} "
 ```
 
+### How to show each command executed by a script
+
+To show each command executed by a script you can insert this instruction into it:
+```shell
+set -x
+```
+
+If you don't want to change the script you can run it with:
+```shell
+bash -x /paht/to/my/script.sh [script args]
+```
+
+
 ## IntelliJ
 ##### Run a subset of tests
 Here are some patterns that can be handy to run some kind of tests from IntelliJ:
