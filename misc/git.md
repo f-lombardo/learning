@@ -170,3 +170,10 @@ git merge --strategy=ours master    # keep the content of this branch, but recor
 git checkout master                 # You want to **lose** all changes on this branch
 git merge better_branch             # fast-forward master up to the merge
 ```
+
+## How to force abort a reset
+```
+rm -rf .git/rebase-apply
+rm -rf .git/rebase-merge
+git reset --hard hash_of_branch_to_go_to
+```
