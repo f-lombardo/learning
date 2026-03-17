@@ -69,6 +69,18 @@ Put all your PDF in a single directory and name them in a way that will reflect 
 gs -q  -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=output.pdf *.pdf
 ```
 
+Another way of doing this is to use [qpdf](https://github.com/qpdf/qpdf)
+
+Install qpdf with:
+```bash
+sudo apt install qpdf
+```
+
+Then run:
+```bash
+qpdf --empty --pages x01.pdf 1-7 x02.pdf 1 -- output.pdf
+```
+
 ## A really simple HTTP server
 We can run a really simple HTTP server for testing purposes using Ruby:
 ```shell
