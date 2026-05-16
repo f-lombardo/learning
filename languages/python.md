@@ -3,6 +3,7 @@
 ## Virtual environment
 
 Create a virtual environment
+
 ```shell
 python -m venv .venv
 ```
@@ -26,7 +27,8 @@ Freeze requirements
 pip freeze > requirements.txt
 ```
 
-Here you can find a script for activating a virtual environment and install base requirements (run it from the project directory with 'source script-name.sh')
+Here you can find a script for activating a virtual environment and install base requirements (run it from the project
+directory with `source script-name.sh`):
 
 ```bash
 #!/bin/bash
@@ -39,4 +41,11 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cp $SCRIPT_DIR/requirements.txt .
 
 pip install -r requirements.txt
+```
+
+You can add these two aliases to the `.bashrc` file:
+
+```bash
+alias py-new='source ~/py/new-python-project.sh'
+alias py-activate='source .venv/bin/activate'
 ```
