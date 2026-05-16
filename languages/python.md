@@ -25,3 +25,18 @@ Freeze requirements
 ```shell
 pip freeze > requirements.txt
 ```
+
+Here you can find a script for activating a virtual environment and install base requirements:
+
+```bash
+#!/bin/bash
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+#Suppose that base requirements.txt is in the same directory as the script, we copy it in the current project directory:
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+copy $SCRIPT_DIR/requirements.txt .
+
+pip install -r requirements.txt
+```
