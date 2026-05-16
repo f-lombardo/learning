@@ -26,7 +26,7 @@ Freeze requirements
 pip freeze > requirements.txt
 ```
 
-Here you can find a script for activating a virtual environment and install base requirements:
+Here you can find a script for activating a virtual environment and install base requirements (run it from the project directory with 'source script-name.sh')
 
 ```bash
 #!/bin/bash
@@ -36,7 +36,7 @@ source .venv/bin/activate
 
 #Suppose that base requirements.txt is in the same directory as the script, we copy it in the current project directory:
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-copy $SCRIPT_DIR/requirements.txt .
+cp $SCRIPT_DIR/requirements.txt .
 
 pip install -r requirements.txt
 ```
