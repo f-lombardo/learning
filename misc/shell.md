@@ -77,6 +77,25 @@ If you don't want to change the script you can run it with:
 bash -x /paht/to/my/script.sh [script args]
 ```
 
+### A script to decode a JWT token
+
+```shell
+function jwt-decode() {
+    local payload
+    payload=$(echo "$1" | jq -R 'split(".") | .[1] | @base64d | fromjson')
+
+    echo "$1" | jq -R 'split(".") | .[0],.[1] | @base64d | fromjson'
+
+    local exp
+    exp=$(echo "$payload" | jq -r '.exp // empty')
+
+    if [[ -n "$exp" ]]; then
+        echo
+        echo "Expiration (local time): $(date -d "@$exp" '+%Y-%m-%d %H:%M:%S %Z')"
+    fi
+}
+```
+
 
 ## IntelliJ
 ##### Run a subset of tests
