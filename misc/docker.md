@@ -2,7 +2,7 @@
 
 ## Rebuild a docker compose project with no cache
 ```
-docker compose up -d --build --no-cache
+docker compose build --no-cache && docker compose up -d
 ```
 
 ## Check docker compose configuration
