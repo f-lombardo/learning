@@ -18,3 +18,9 @@ else
   echo "Invalid conf"
 fi
 ```
+
+## Stop a docker compose project clearing volumes and images
+
+```shell
+docker compose down -v  --remove-orphans --rmi all
+```
